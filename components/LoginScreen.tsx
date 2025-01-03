@@ -167,3 +167,5 @@ export default function LoginScreen({ navigation }: any) {
     </KeyboardAvoidingView>
   );
 }
+
+// omo, anyhow sha, fuck this people
