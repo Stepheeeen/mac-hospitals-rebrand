@@ -13,6 +13,7 @@ import { StatusBar } from "expo-status-bar";
 import Checkbox from "expo-checkbox";
 import { LinearGradient } from "expo-linear-gradient";
 import tw from "twrnc";
+import Inputs from "../reuseable/inputs";
 
 export default function LoginScreen({ navigation }: any) {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ export default function LoginScreen({ navigation }: any) {
         {/* Logo */}
         <View style={tw`items-center mb-12`}>
           <Image
-            source={require("../assets/images/mac-hospitals-logo.png")}
+            source={require("../../assets/images/mac-hospitals-logo.png")}
             style={tw`w-16 h-16`}
             resizeMode="contain"
           />
@@ -47,7 +48,7 @@ export default function LoginScreen({ navigation }: any) {
           style={tw`flex-row items-center h-[48px] justify-center py-3 px-4 rounded-[20px] border border-gray-200 mb-4`}
         >
           <Image
-            source={require("../assets/images/google-icon.png")}
+            source={require("../../assets/images/google-icon.png")}
             style={tw`w-5 h-5 mr-2`}
           />
           <Text style={tw`text-gray-700 font-medium text-base`}>
@@ -59,7 +60,7 @@ export default function LoginScreen({ navigation }: any) {
           style={tw`flex-row items-center justify-center h-[48px] py-3 px-4 rounded-[20px] bg-[#1877F2] mb-4`}
         >
           <Image
-            source={require("../assets/images/facebook-icon.png")}
+            source={require("../../assets/images/facebook-icon.png")}
             style={tw`w-5 h-5 mr-2`}
           />
           <Text style={tw`text-white font-medium text-base`}>
@@ -75,21 +76,20 @@ export default function LoginScreen({ navigation }: any) {
         </View>
 
         {/* Email Input */}
-        <Text style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[37%]`}>
-          Email address
-        </Text>
-        <TextInput
-          style={tw`w-full border border-gray-200 rounded-[20px] px-4 py-5 mb-4`}
-          placeholder="Enter your email address"
-          placeholderTextColor="#0B3C4999"
+        <Inputs
+        style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[27%]`}
+          Label="Email address"
           value={email}
-          onChangeText={setEmail}
-          keyboardType="email-address"
-          autoCapitalize="none"
+          keyboardType={"email-address"}
+          placeholder="Enter your email address"
+          setValue={setEmail}
+          // onChangedValue={set}
         />
 
         {/* Password Input */}
-        <Text style={tw`text-gray-700 text-base mb-[-10px] ml-6 bg-white z-20 w-[27%] px-1`}>
+        <Text
+          style={tw`text-gray-700 text-base mb-[-10px] ml-6 bg-white z-20 w-[27%] px-1`}
+        >
           Password
         </Text>
         <View style={tw`relative`}>
@@ -106,7 +106,7 @@ export default function LoginScreen({ navigation }: any) {
             onPress={() => setShowPassword(!showPassword)}
           >
             <Image
-              source={require("../assets/images/eye-icon.png")}
+              source={require("../../assets/images/eye-icon.png")}
               style={tw`w-6 h-6 opacity-50`}
             />
           </TouchableOpacity>

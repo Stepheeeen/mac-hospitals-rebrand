@@ -1,9 +1,11 @@
-import LoginScreen from '@/components/LoginScreen'
+import LoginScreen from '@/components/auth/LoginScreen'
+import SignUpScreen from '@/components/auth/SignUpScreen'
 import React from 'react'
 
 const index = () => {
   return (
-    <LoginScreen/>
+    // <LoginScreen/>
+    <SignUpScreen/>
   )
 }
 
