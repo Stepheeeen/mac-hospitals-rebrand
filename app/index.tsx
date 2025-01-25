@@ -1,12 +1,20 @@
-import LoginScreen from '@/components/auth/LoginScreen'
-import SignUpScreen from '@/components/auth/SignUpScreen'
-import React from 'react'
+import React from "react";
+import { View, Image } from "react-native";
+import tw from "twrnc";
+import { router } from "expo-router";
 
 const index = () => {
+  setTimeout(() => {
+    router.replace("../auth/SignIn/index.tsx");
+  }, 3000);
   return (
-    // <LoginScreen/>
-    <SignUpScreen/>
-  )
-}
+    <View style={tw`flex-1 justify-center items-center`}>
+      <Image
+        source={require("../assets/images/welcome_screen.png")}
+        style={tw`flex-1 w-full h-full`}
+      />
+    </View>
+  );
+};
 
-export default index
+export default index;
