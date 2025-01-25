@@ -77,7 +77,7 @@ export default function LoginScreen({ navigation }: any) {
 
         {/* Email Input */}
         <Inputs
-        style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[27%]`}
+          style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[27%]`}
           Label="Email address"
           value={email}
           keyboardType={"email-address"}
