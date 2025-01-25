@@ -14,6 +14,7 @@ import Checkbox from "expo-checkbox";
 import { LinearGradient } from "expo-linear-gradient";
 import tw from "twrnc";
 import Inputs from "../reuseable/inputs";
+import { router } from "expo-router";
 
 export default function LoginScreen({ navigation }: any) {
   const [email, setEmail] = useState("");
@@ -83,7 +84,7 @@ export default function LoginScreen({ navigation }: any) {
           keyboardType={"email-address"}
           placeholder="Enter your email address"
           setValue={setEmail}
-          // onChangedValue={set}
+        // onChangedValue={set}
         />
 
         {/* Password Input */}
@@ -134,7 +135,7 @@ export default function LoginScreen({ navigation }: any) {
         {/* Sign Up Link */}
         <View style={tw`flex-row justify-center mb-17`}>
           <Text style={tw`text-gray-700`}>Don't have an account? </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => {router.push("/auth/signUp") }}>
             <Text style={tw`text-[#0EA47A]`}>Sign up</Text>
           </TouchableOpacity>
         </View>
