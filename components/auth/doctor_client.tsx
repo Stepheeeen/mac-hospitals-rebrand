@@ -37,12 +37,7 @@ const Doctor_Client = () => {
           </TouchableOpacity>
         </View>
       </View>
-      <Button
-       colors={["#4FC48B", "#298582"]}
-      text="Continue"
-      />
-
-      
+      <Button colors={["#4FC48B", "#298582"]} text="Continue" />
     </View>
   );
 };

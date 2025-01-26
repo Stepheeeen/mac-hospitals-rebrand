@@ -12,7 +12,7 @@ const Button = (
       colors,
       func
    }:{
-      text?: String,
+      text?: string,
       colors?: any,
       func?:(event: GestureResponderEvent) => void
    }
