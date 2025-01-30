@@ -19,7 +19,7 @@ import { router } from "expo-router";
 export default function LoginScreen({ navigation }: any) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
 
   return (
@@ -78,43 +78,29 @@ export default function LoginScreen({ navigation }: any) {
 
         {/* Email Input */}
         <Inputs
-          style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[27%]`}
+          style={`w-[32%]`}
           Label="Email address"
           value={email}
           keyboardType={"email-address"}
           placeholder="Enter your email address"
           setValue={setEmail}
-        // onChangedValue={set}
+          // onChangedValue={set}
         />
 
         {/* Password Input */}
-        <Text
-          style={tw`text-gray-700 text-base mb-[-10px] ml-6 bg-white z-20 w-[27%] px-1`}
-        >
-          Password
-        </Text>
-        <View style={tw`relative`}>
-          <TextInput
-            style={tw`w-full border border-gray-200 rounded-[20px] px-4 py-5 mb-4 pr-12`}
-            placeholder="Enter your password"
-            value={password}
-            onChangeText={setPassword}
-            placeholderTextColor="#0B3C4999"
-            secureTextEntry={!showPassword}
-          />
-          <TouchableOpacity
-            style={tw`absolute right-4 top-3`}
-            onPress={() => setShowPassword(!showPassword)}
-          >
-            <Image
-              source={require("../../assets/images/eye-icon.png")}
-              style={tw`w-6 h-6 opacity-50`}
-            />
-          </TouchableOpacity>
-        </View>
+        <Inputs
+          style={`w-[23%]`}
+          Label="Password"
+          placeholder="Enter your password"
+          value={password}
+          setValue={setPassword}
+          keyboardType="default"
+          passwordVisible={passwordVisible}
+          setPasswordVisible={setPasswordVisible}
+        />
 
         {/* Remember Me & Forgot Password */}
-        <View style={tw`flex-row items-center justify-between pb-6`}>
+        <View style={tw`flex-row items-center justify-between pb-6 mt-2`}>
           <TouchableOpacity
             style={tw`flex-row items-center`}
             onPress={() => setRememberMe(!rememberMe)}
@@ -127,7 +113,7 @@ export default function LoginScreen({ navigation }: any) {
             <Text style={tw`text-gray-700`}>Remember me</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => router.push("/auth/ForgetPassword")}>
             <Text style={tw`text-[#0EA47A] underline`}>Forgot Password?</Text>
           </TouchableOpacity>
         </View>
@@ -135,7 +121,7 @@ export default function LoginScreen({ navigation }: any) {
         {/* Sign Up Link */}
         <View style={tw`flex-row justify-center mb-17`}>
           <Text style={tw`text-gray-700`}>Don't have an account? </Text>
-          <TouchableOpacity onPress={() => {router.push("/auth/signUp") }}>
+          <TouchableOpacity onPress={() => router.push("/auth/signUp")}>
             <Text style={tw`text-[#0EA47A]`}>Sign up</Text>
           </TouchableOpacity>
         </View>

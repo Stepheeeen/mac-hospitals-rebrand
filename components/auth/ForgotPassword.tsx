@@ -10,21 +10,31 @@ const ForgotPassword = ({ title, value }: { title?: string; value?: any }) => {
   return (
     <>
       <Tabbar screenText="Forget Password" />
-      <View style={tw`flex items-center justify-between flex-col`}>
-        <View>
-          <Text style={tw`pl-3 text-lg font-bold mt-4 my-10 text-5.7`}>
+      <View style={tw`flex items-center justify-between flex-col w-full`}>
+        <View style={tw`w-full p-3`}>
+          <Text style={tw`text-[16px] text-[#0B3C49]`}>
             Select how you would like to retrieve your password
           </Text>
-          <Container
-            style={tw`mt-4`}
-            title="Phone number"
-            value={"080123xxx57"}
-          />
-          <Container
-            style={tw`my-6`}
-            title="Email address"
-            value={"example@gmail.com"}
-          />
+
+          <View>
+            <View
+              style={tw`p-2 items-center justify-center flex-row rounded-[20px] bg-white shadow-md`}
+            >
+              <View
+                style={tw`w-15 h-15 items-center justify-center rounded-full bg-gray-200`}
+              >
+                <Image
+                  style={tw``}
+                  source={require("../../assets/images/Vector.png")}
+                />
+              </View>
+
+              <View style={tw`mx-6`}>
+                <Text style={tw`text-3.6`}>{title}</Text>
+                <Text style={tw`text-4.6 font-bold my-2.4`}>{value}</Text>
+              </View>
+            </View>
+          </View>
         </View>
 
         <Button text="Continue" colors={["#4FC48B", "#298582"]} />

@@ -1,10 +1,8 @@
-import React from 'react'
-// import SignUpScreen from './SignUpScreen'
+import React from "react";
+import SignUpScreen from "@/components/auth/SignUpScreen";
 
 const index = () => {
-  return (
-    <></>
-  )
-}
+  return <SignUpScreen />;
+};
 
-export default index
+export default index;
