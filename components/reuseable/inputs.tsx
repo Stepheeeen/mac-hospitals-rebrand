@@ -3,7 +3,6 @@ import { Text, TextInput, TouchableOpacity, Image, View } from "react-native";
 import tw from "twrnc";
 
 const Inputs = ({
-  
   Label,
   style,
   placeholder,
@@ -12,7 +11,7 @@ const Inputs = ({
   keyboardType,
   passwordVisible,
   setPasswordVisible,
-}: // onChangedValue,
+}: 
 
 {
   onChangedValue?: any;
@@ -44,21 +43,18 @@ const Inputs = ({
         secureTextEntry={!passwordVisible}
         // onChange={onChangedValue}
       />
-     
-     
-        {passwordVisible !== null && (
-          <TouchableOpacity
-            style={tw`absolute right-5 top-10`}
-            onPress={() => setPasswordVisible(!passwordVisible)}
-          >
-            <Image
-              source={require("../../assets/images/eye-icon.png")}
-              style={tw`w-6 h-6 opacity-50`}
-            />
-          </TouchableOpacity>
-        )}
-    
-      
+
+      {passwordVisible !== null && (
+        <TouchableOpacity
+          style={tw`absolute right-5 top-10`}
+          onPress={() => setPasswordVisible(!passwordVisible)}
+        >
+          <Image
+            source={require("../../assets/images/eye-icon.png")}
+            style={tw`w-6 h-6 opacity-50`}
+          />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
