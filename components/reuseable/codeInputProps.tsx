@@ -87,7 +87,7 @@ const CodeInput: React.FC<CodeInputProps> = ({
           <TextInput
             key={index} // Unique key for each input box
             ref={(ref) => (inputs[index] = ref!)} // Save reference for focus management
-            style={tw`w-16 h-16 border border-gray-300 rounded-lg text-center text-2xl shadow-xl bg-white`}
+            style={tw`w-18 h-18 border border-gray-300 rounded-lg text-center text-2xl shadow-lg bg-white`}
             keyboardType="numeric" // Numeric keyboard for input
             maxLength={1} // Restrict input to a single digit
             value={value} // Controlled value from the state

@@ -13,6 +13,8 @@ import tw from "twrnc";
 import { LinearGradient } from "expo-linear-gradient";
 
 import Inputs from "../reuseable/inputs";
+import { router } from "expo-router";
+import Button from "../reuseable/button";
 
 export default function SignUpScreen({ navigation }: any) {
   const [name, setName] = useState("");
@@ -108,25 +110,12 @@ export default function SignUpScreen({ navigation }: any) {
         {/* Sign In link* */}
         <View style={tw`flex-row justify-center mb-17`}>
           <Text style={tw`text-gray-700`}>Already have an account? </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>router.push("/auth/SignIn")}>
             <Text style={tw`text-[#0EA47A]`}>Sign In</Text>
           </TouchableOpacity>
         </View>
 
-        <View style={tw`flex-row justify-between mb-2`}>
-          <TouchableOpacity style={tw`flex-1 rounded-[20px] mr-2`}>
-            <LinearGradient
-              colors={["#4FC48B", "#298582"]}
-              start={[0, 0]}
-              end={[1, 1]}
-              style={tw`rounded-[20px] h-[48px] justify-center items-center`}
-            >
-              <Text style={tw`text-white text-center font-medium text-lg`}>
-                Login
-              </Text>
-            </LinearGradient>
-          </TouchableOpacity>
-        </View>
+        <Button colors={["#4FC48B", "#298582"]} text="Signup" func={()=>router.push("/auth/Options/")}/>
         {/* </TouchableOpacity> */}
       </ScrollView>
     </KeyboardAvoidingView>
