@@ -11,15 +11,15 @@ const Tabbar = ({
   subText?: any;
 }) => {
   return (
-    <View style={tw`flex flex-row item-center justify-between w-full p-7`}>
+    <View style={tw`flex flex-row items-center justify-between w-full p-7`}>
       <Pressable onPress={() => router.back()}>
         <Image
-          style={tw`h-6 mt-1 w-4`}
+          style={tw`h-4 w-3`}
           source={require("../../assets/images/arrow_back.png")}
         />
       </Pressable>
 
-      <Text style={tw`text-xl font-bold`}>{screenText}</Text>
+      <Text style={tw`text-[18px] font-[400]`}>{screenText}</Text>
 
       <View>{subText}</View>
     </View>

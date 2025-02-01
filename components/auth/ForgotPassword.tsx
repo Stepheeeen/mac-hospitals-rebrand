@@ -5,6 +5,7 @@ import { Text, Image, Pressable } from "react-native";
 import Tabbar from "../reuseable/tabbar";
 import Container from "../reuseable/container";
 import Button from "../reuseable/button";
+import { router } from "expo-router/build/imperative-api";
 
 const ForgotPassword = ({ title, value }: { title?: string; value?: any }) => {
   return (
@@ -27,7 +28,9 @@ const ForgotPassword = ({ title, value }: { title?: string; value?: any }) => {
           />
         </View>
 
-        <Button text="Continue" colors={["#4FC48B", "#298582"]} />
+        <Button 
+        func={()=>router.push("/auth/OTP")}
+        text="Continue" colors={["#4FC48B", "#298582"]} />
       </View>
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, TextInput, TouchableOpacity, Image, View } from "react-native";
 import tw from "twrnc";
 
@@ -9,21 +9,34 @@ const Inputs = ({
   value,
   setValue,
   keyboardType,
-  passwordVisible,
+  passwordVisible = false,
   setPasswordVisible,
-}: 
+}: // onChangedValue,
 
 {
   onChangedValue?: any;
-  passwordVisible?: Boolean;
+  // passwordVisible?: Boolean;
   style?: any;
   Label?: string;
+  // style?: any;
   placeholder?: string;
   value?: string;
-  setValue?: any;
+  setValue?: (text: string) => void;
   keyboardType?: any;
-  setPasswordVisible?: any;
+  passwordVisible?: boolean;
+  setPasswordVisible?: (visible: boolean) => void;
 }) => {
+  const [isValid, setIsValid] = useState(true);
+
+  const validateInput = (text: any) => {
+    // Add your validation logic here
+    const isValid = text.length > 0; // Example: input should not be empty
+    setIsValid(isValid);
+    if (setValue) {
+      setValue(text);
+    }
+  };
+
   return (
     <View style={tw`relative`}>
       <Text
@@ -43,18 +56,21 @@ const Inputs = ({
         secureTextEntry={!passwordVisible}
         // onChange={onChangedValue}
       />
-
-      {passwordVisible !== null && (
-        <TouchableOpacity
-          style={tw`absolute right-5 top-10`}
-          onPress={() => setPasswordVisible(!passwordVisible)}
-        >
-          <Image
-            source={require("../../assets/images/eye-icon.png")}
-            style={tw`w-6 h-6 opacity-50`}
-          />
-        </TouchableOpacity>
-      )}
+     
+     
+     {setPasswordVisible && (
+          <TouchableOpacity
+            style={tw`absolute right-5 top-[35%]`}
+            onPress={() => setPasswordVisible(!passwordVisible)}
+          >
+            <Image
+              source={require("../../assets/images/eye-icon.png")}
+              style={tw`w-6 h-6 opacity-50`}
+            />
+          </TouchableOpacity>
+        )}
+    
+      
     </View>
   );
 };

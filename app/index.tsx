@@ -8,19 +8,19 @@ import ResetPassword from "@/components/auth/resetPassword";
 import LoginScreen from "@/components/auth/LoginScreen";
 
 const index = () => {
-  // setTimeout(() => {
-  //   router.replace("../auth/SignIn/index.tsx");
-  // }, 3000);
+  setTimeout(() => {
+    router.replace("/auth/SignIn");
+  }, 3000);
   return (
-    // <View style={tw`flex-1 justify-center items-center`}>
-    //   <Image
-    //     source={require("../assets/images/welcome_screen.png")}
-    //     style={tw`flex-1 w-full h-full`}
-    //   />
-    // </View>
+    <View style={tw`flex-1 justify-center items-center`}>
+      <Image
+        source={require("../assets/images/welcome_screen.png")}
+        style={tw`flex-1 w-full h-full`}
+      />
+    </View>
     // <ForgotPassword/>
     // <OtpScreen/>
-    <ResetPassword/>
+    // <ResetPassword/>
     // <LoginScreen/>
   );
 };

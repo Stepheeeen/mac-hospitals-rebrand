@@ -13,13 +13,14 @@ import tw from "twrnc";
 import { LinearGradient } from "expo-linear-gradient";
 
 import Inputs from "../reuseable/inputs";
+import { router } from "expo-router";
 
 export default function SignUpScreen({ navigation }: any) {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
   return (
     <KeyboardAvoidingView
       style={tw`flex-1`}
@@ -73,7 +74,7 @@ export default function SignUpScreen({ navigation }: any) {
         </View>
         {/* Sign Up Form */}
         <Inputs
-          style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[15%]`}
+          style={`w-[15%]`}
           Label="Name"
           placeholder="Enter your name"
           keyboardType={"default"}
@@ -81,38 +82,43 @@ export default function SignUpScreen({ navigation }: any) {
           setValue={setName}
         />
         <Inputs
-          style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[25]`}
+          style={`w-[32%]`}
           Label="Email address"
           placeholder="Enter your Email"
           value={email}
           setValue={setEmail}
         />
         <Inputs
-          style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[37%]`}
+          style={`w-[34%]`}
           Label="Phone Number"
           placeholder="080438943xxx"
           value={phoneNumber}
           setValue={setPhoneNumber}
         />
         <Inputs
-          style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[25%]`}
+          style={`w-[23%]`}
           Label="Password"
           placeholder="********"
           value={password}
           setValue={setPassword}
-          passwordVisible={!showPassword}
+          keyboardType="default"
+          passwordVisible={passwordVisible}
+          setPasswordVisible={setPasswordVisible}
         />
 
         {/* Sign In link* */}
         <View style={tw`flex-row justify-center mb-17`}>
           <Text style={tw`text-gray-700`}>Already have an account? </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> router.push("/auth/SignIn")}>
             <Text style={tw`text-[#0EA47A]`}>Sign In</Text>
           </TouchableOpacity>
         </View>
 
         <View style={tw`flex-row justify-between mb-2`}>
-          <TouchableOpacity style={tw`flex-1 rounded-[20px] mr-2`}>
+          <TouchableOpacity style={tw`flex-1 rounded-[20px] mr-2`}
+          onPress={()=>router.push("/auth/Registration")}
+          
+          >
             <LinearGradient
               colors={["#4FC48B", "#298582"]}
               start={[0, 0]}
@@ -120,7 +126,7 @@ export default function SignUpScreen({ navigation }: any) {
               style={tw`rounded-[20px] h-[48px] justify-center items-center`}
             >
               <Text style={tw`text-white text-center font-medium text-lg`}>
-                Login
+                Sign Up
               </Text>
             </LinearGradient>
           </TouchableOpacity>

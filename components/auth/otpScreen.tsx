@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, Alert } from "react-native";
 import CodeInputProps from "../reuseable/codeInputProps";
 import Button from "../reuseable/button";
+import { router } from "expo-router";
 // import CodeInput from "./CodeInput";
 
 const OtpScreen = () => {
@@ -25,6 +26,7 @@ const OtpScreen = () => {
       <Button
       colors={["#4FC48B", "#298582"]}
       text="Verify"
+      func={()=>router.push("/auth/Registration")}
       />
     </View>
   );

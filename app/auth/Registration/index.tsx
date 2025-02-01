@@ -1,8 +1,9 @@
 import React from "react";
 import SignUpScreen from "@/components/auth/SignUpScreen";
+import Registration from "@/components/registration/registration";
 
 const index = () => {
-  return <SignUpScreen />;
+  return <Registration />;
 };
 
 export default index;
