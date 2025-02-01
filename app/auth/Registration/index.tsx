@@ -1,6 +1,5 @@
 import React from "react";
-import SignUpScreen from "@/components/auth/SignUpScreen";
-import Registration from "@/components/registration/registration";
+import Registration from "@/components/auth/registration";
 
 const index = () => {
   return <Registration />;

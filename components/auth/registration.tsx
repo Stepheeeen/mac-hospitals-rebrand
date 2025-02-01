@@ -36,7 +36,7 @@ const Registration = () => {
         keyboardShouldPersistTaps="handled"
       >
         <View style={tw`flex justify-between flex-col`}>
-          <View style={tw`flew-col`}>
+          <View style={tw`flex-col`}>
             <Inputs
               style={tw`text-gray-700 text-base mb-[-10px] ml-6 px-1 bg-white z-20 w-[18%]`}
               Label="Name"
@@ -126,7 +126,7 @@ const Registration = () => {
 
             <Button
               text="Save and Continue"
-              func={() => router.push("/Screens/Dashboard")}
+              func={() => router.push("..")}
               colors={["#4FC48B", "#298582"]}
             />
           </View>
