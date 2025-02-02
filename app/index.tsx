@@ -2,10 +2,6 @@ import React from "react";
 import { View, Image } from "react-native";
 import tw from "twrnc";
 import { router } from "expo-router";
-import ForgotPassword from "@/components/auth/ForgotPassword";
-import OtpScreen from "@/components/auth/otpScreen";
-import ResetPassword from "@/components/auth/resetPassword";
-import LoginScreen from "@/components/auth/LoginScreen";
 
 const index = () => {
   setTimeout(() => {
@@ -18,10 +14,6 @@ const index = () => {
         style={tw`flex-1 w-full h-full`}
       />
     </View>
-    // <ForgotPassword/>
-    // <OtpScreen/>
-    // <ResetPassword/>
-    // <LoginScreen/>
   );
 };
 

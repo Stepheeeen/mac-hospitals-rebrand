@@ -128,7 +128,7 @@ export default function LoginScreen({ navigation }: any) {
 
         {/* Login & Back Buttons */}
         <View style={tw`flex-row justify-between mt-10`}>
-          <TouchableOpacity style={tw`flex-1 rounded-[20px] mr-2`}>
+          <TouchableOpacity style={tw`flex-1 rounded-[20px] mr-2`} onPress={()=> router.push("/tabs/Home")}>
             <LinearGradient
               colors={["#4FC48B", "#298582"]}
               start={[0, 0]}
@@ -143,7 +143,7 @@ export default function LoginScreen({ navigation }: any) {
 
           <TouchableOpacity
             style={tw`flex-1 border border-[#0EA47A] h-[48px] py-2 rounded-[20px] ml-2`}
-            onPress={() => navigation.goBack()}
+            onPress={() => router.back()}
           >
             <Text style={tw`text-[#0EA47A] text-center font-medium text-lg`}>
               Back

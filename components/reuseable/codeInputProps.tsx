@@ -77,7 +77,7 @@ const CodeInput: React.FC<CodeInputProps> = ({
   return (
     <View style={tw`p-5 bg-white`}>
       {/* Display the message with the masked phone number */}
-      <Text style={tw`text-center text-gray-700 text-lg mb-5`}>
+      <Text style={tw`text-center text-gray-700 text-xl mb-5`}>
         Enter the code sent to {phoneNumber}
       </Text>
 
@@ -103,7 +103,7 @@ const CodeInput: React.FC<CodeInputProps> = ({
       </View>
 
       {/* Countdown timer message */}
-      <Text style={tw`text-center text-gray-500 mb-5`}>
+      <Text style={tw`text-center text-lg text-gray-500 mb-5`}>
         Resend code in{" "}
         <Text style={tw`text-red-500`}>{timer}s</Text>
       </Text>
