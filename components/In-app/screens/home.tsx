@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ScrollView, View, Image, Text } from "react-native";
 import tw from "twrnc";
 
-const Home = () => {
+const HomeScreen = () => {
   const [user] = useState("David");
   const [imageUrl] = useState("");
   return (
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;
