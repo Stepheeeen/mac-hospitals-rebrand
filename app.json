@@ -3,34 +3,61 @@
     "name": "mac-hospitals",
     "slug": "mac-hospitals",
     "version": "1.0.0",
+    "scheme": "mac-hospitals",
     "orientation": "portrait",
-    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.apostleapp.machospitals",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "expo": {
+      "splash": {
+        "image": "./assets/splashscreen_logo.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      }
     },
     "android": {
+      "package": "com.apostleapp.machospitals",
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
       },
-      "package": "com.apostleapp.machospitals"
+      "permissions": [],
+      "softwareKeyboardLayoutMode": "pan"
     },
     "web": {
       "bundler": "metro",
       "output": "static"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FE6249"
+        }
+      ]
+    ],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "experiments": {
       "typedRoutes": true
     },
     "extra": {
-      "router": {
-        "origin": false
-      },
       "eas": {
-        "projectId": "b79387f5-e769-48d6-99da-b7b8506c3429"
+        "projectId": "061848b8-e3b0-4678-b85a-a1e635520796"
       }
-    }
+    },
+    "owner": "steph4n"
   }
 }
