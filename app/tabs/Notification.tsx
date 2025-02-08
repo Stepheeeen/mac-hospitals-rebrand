@@ -1,4 +1,4 @@
-import NotificationScreen from "@/components/In-app/screens/notification";
+import NotificationScreen from "@/components/Home screens/notification";
 import React from "react";
 
 const Notification = () => {

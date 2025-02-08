@@ -1,4 +1,4 @@
-import ProfileScreen from "@/components/In-app/screens/profile";
+import ProfileScreen from "@/components/Home screens/profile";
 import React from "react";
 
 const index = () => {
