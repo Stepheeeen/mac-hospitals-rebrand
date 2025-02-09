@@ -1,4 +1,4 @@
-import HomeScreen from "@/components/In-app/screens/home";
+import HomeScreen from "@/components/Home screens/home";
 import React from "react";
 
 const index = () => {

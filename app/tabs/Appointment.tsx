@@ -1,4 +1,4 @@
-import AppointmentScreen from "@/components/In-app/screens/appointment";
+import AppointmentScreen from "@/components/Home screens/appointment";
 import React from "react";
 
 const index = () => {

@@ -126,7 +126,7 @@ const Registration = () => {
 
             <Button
               text="Save and Continue"
-              func={() => router.push("..")}
+              func={() => router.push("/tabs/Home")}
               colors={["#4FC48B", "#298582"]}
             />
           </View>
