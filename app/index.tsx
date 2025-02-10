@@ -13,7 +13,7 @@ const index = () => {
         source={require("../assets/images/welcome_screen.png")}
         style={tw`flex-1 w-full h-full`}
       />
-    </View>
+    </View> 
   );
 };
 
