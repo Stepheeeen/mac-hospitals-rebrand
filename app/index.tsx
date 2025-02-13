@@ -14,7 +14,7 @@ const index = () => {
         style={tw`flex-1 w-full h-full`}
       />
       
-    </View>
+    </View> 
   );
 };
 
