@@ -10,18 +10,17 @@ const Button = ({
   text,
   colors,
   func,
+  style,
 }: {
   text?: string;
   colors?: any;
   func?: (event: GestureResponderEvent) => void;
+  style?: any;
 }) => {
   return (
     <>
-      <View style={tw`flex-row justify-between mt-10`}>
-        <TouchableOpacity
-          style={tw`flex-1 rounded-[20px] mr-2 pr-4 pl-4 pt-24`}
-          onPress={func}
-        >
+      <View style={tw`flex-row justify-between ${style}`}>
+        <TouchableOpacity style={tw`flex-1 rounded-[20px] mr-2`} onPress={func}>
           <LinearGradient
             colors={colors}
             start={[0, 0]}
