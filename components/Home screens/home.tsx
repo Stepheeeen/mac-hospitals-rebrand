@@ -5,6 +5,7 @@ import { ScrollView, View, Image, Text, ImageBackground } from "react-native";
 import SearchBar from "@/components/reuseable/Searchbar";
 import tw from "twrnc";
 import InfoCard from "@/components/reuseable/InfoCard";
+import { router } from "expo-router";
 
 const HomeScreen = () => {
   const [user] = useState("MAC");
@@ -91,6 +92,7 @@ const HomeScreen = () => {
 
         {infoCardContext?.map((info, index) => (
           <InfoCard
+            onPress={() => router.push("/pages/infertility/")}
             key={index}
             imageSource={info.image}
             title={info.title}

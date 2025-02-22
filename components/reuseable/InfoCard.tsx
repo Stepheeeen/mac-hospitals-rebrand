@@ -6,15 +6,18 @@ interface InfoCardProps {
   imageSource: any;
   title: string;
   description: string;
+  onPress: any;
 }
 
 const InfoCard: React.FC<InfoCardProps> = ({
   imageSource,
   title,
   description,
+  onPress,
 }) => {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={tw`flex-row bg-green-100 rounded-xl overflow-hidden shadow-md my-3`}
     >
       <Image
