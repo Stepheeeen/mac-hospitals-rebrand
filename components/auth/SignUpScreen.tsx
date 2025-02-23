@@ -110,12 +110,16 @@ export default function SignUpScreen({ navigation }: any) {
         {/* Sign In link* */}
         <View style={tw`flex-row justify-center mb-17`}>
           <Text style={tw`text-gray-700`}>Already have an account? </Text>
-          <TouchableOpacity onPress={()=>router.push("/auth/SignIn")}>
+          <TouchableOpacity onPress={() => router.push("/auth/SignIn")}>
             <Text style={tw`text-[#0EA47A]`}>Sign In</Text>
           </TouchableOpacity>
         </View>
 
-        <Button colors={["#4FC48B", "#298582"]} text="Signup" func={()=>router.push("/auth/Options/")}/>
+        <Button
+          colors={["#4FC48B", "#298582"]}
+          text="Signup"
+          func={() => router.push("/auth/Options/")}
+        />
         {/* </TouchableOpacity> */}
       </ScrollView>
     </KeyboardAvoidingView>

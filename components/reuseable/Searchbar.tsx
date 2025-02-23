@@ -15,8 +15,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   return (
     <View style={styles.container}>
-      {/* <Icon name="search" type="feather" color="#ccc" size={20} style={styles.icon} /> */}
-      <Image source={require("../../assets/images/Vector (1).png")}/>
+      <Image source={require("../../assets/images/Vector (1).png")} />
       <TextInput
         style={styles.input}
         placeholder={placeholder}
@@ -33,20 +32,21 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#A1E1C0", // Light green border
+    borderColor: "#4FC48B", // Light green border
     borderRadius: 24,
-    paddingVertical: 4,
+    paddingVertical: 6,
     paddingHorizontal: 12,
     width: "100%",
     backgroundColor: "white",
   },
   icon: {
-    marginRight: 8,
+    marginRight: 10,
   },
   input: {
     flex: 1,
-    fontSize: 14,
+    fontSize: 16,
     color: "#333",
+    marginLeft: 5,
   },
 });
 

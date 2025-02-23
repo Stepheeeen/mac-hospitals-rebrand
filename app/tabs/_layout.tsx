@@ -63,7 +63,7 @@ const layout = () => {
       </Tabs>
 
       <View
-        style={tw`absolute bottom-0 left-0 right-0 bg-[#E4F6E4] text-black p-3 py-5 shadow-lg flex-row justify-between items-center`}
+        style={tw`absolute bottom-0 left-0 right-0 bg-[#E4F6E4] text-black px-5 py-5 shadow-lg flex-row justify-between items-center`}
       >
         {Links.map((link, index) => (
           <TouchableOpacity
